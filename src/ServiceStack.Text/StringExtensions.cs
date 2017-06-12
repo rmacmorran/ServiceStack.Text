@@ -886,7 +886,7 @@ namespace ServiceStack
             int pos;
             // Avoid a possible infinite loop
             if (needle == replacement) return haystack;
-            while ((pos = haystack.IndexOf(needle, StringComparison.Ordinal)) > 0)
+            while ((pos = haystack.IndexOf(needle, StringComparison.Ordinal)) > -1)
             {
                 haystack = haystack.Substring(0, pos)
                     + replacement
